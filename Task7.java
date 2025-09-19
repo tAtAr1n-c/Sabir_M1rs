@@ -8,7 +8,7 @@ public class Task7{
 		int count = 0;
 		for (int n = 0; n < 11; n++){
 			if ((n * n) >= ((x * x) + (y * y))){
-				System.out.println("ТЫ ПОПАЛ В РАДИУС" + " " + n);
+				System.out.println("ТЫ ПОПАЛ В РАДИУС " + n);
 				count++;
 				break;
 			}
