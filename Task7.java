@@ -7,7 +7,7 @@ public class Task7{
 		float y = scanner.nextFloat();
 		int count = 0;
 		for (int n = 0; n < 11; n++){
-			if ((n * n) + (n * n) >= ((x * x) + (y * y))){
+			if ((n * n) >= ((x * x) + (y * y))){
 				System.out.println("ТЫ ПОПАЛ В РАДИУС" + " " + n);
 				count++;
 				break;
