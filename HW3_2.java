@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void HW3_2(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int str = scanner.nextInt();
         int stol =  scanner.nextInt();
