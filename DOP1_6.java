@@ -14,7 +14,7 @@ public class DOP1_6{
         for(int i = 0; i < str; i++){
             if (array[i] != 0){
                 proizved *= array[i];
-            }else{continue;}
+            }
         }
         System.out.println(proizved);
     }
