@@ -4,16 +4,15 @@ public class Main {
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
         int x = scanner.nextInt();
-        int c5000 = x / 5000;
-        int c1000 = (x - c5000 * 5000) / 1000;
-        int c100  = (x - c5000 * 5000 -  c1000 * 1000) / 100;
-        int c50 = (x - c5000 * 5000 -  c1000 * 1000 - c100 * 100) / 50;
-        int c10 = (x - c5000 * 5000 -  c1000 * 1000 - c100 * 100 - c50 * 50) / 10;
-        System.out.println("5000: " + c5000);
-        System.out.println("1000: " + c1000);
-        System.out.println("100: " + c100);
-        System.out.println("50: " + c50);
-        System.out.println("10: " + c10);
-
+        int[] array = new int[5];
+        int[] array1= {5000, 1000, 100, 50, 10};
+        array[0] = x / 5000;
+        array[1] = (x - array[0] * 5000) / 1000;
+        array[2]   = (x - array[0] * 5000 -  array[1] * 1000) / 100;
+        array[3]  = (x - array[0] * 5000 -  array[1] * 1000 - array[2] * 100) / 50;
+        array[4]  = (x - array[0] * 5000 -  array[1] * 1000 - array[2] * 100 - array[3] * 50) / 10;
+        for(int i = 0; i < 5; i++){
+            System.out.println(array[i] + " - " + array1[i]);
+        }
     }
 }
