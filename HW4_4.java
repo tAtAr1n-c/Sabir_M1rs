@@ -32,9 +32,9 @@ public class Main{
 
     public static boolean Podryad(int x){
         while (x >= 10) {
-            int  slev= x % 10;
-            int  sprav= (x / 10) % 10;
-            if (sprav >= slev) {
+            int  sprav= x % 10;
+            int  slev= (x / 10) % 10;
+            if (slev >= sprav) {
                 return false;
             }
             x /= 10;
