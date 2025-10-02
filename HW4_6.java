@@ -16,18 +16,10 @@
                     if (i + j >= sered){
                         array[i][j] = 1;
                     }
-                }
-            }
-
-            
-            for(int i = 0; i < str; i++){
-                for(int j = 0; j < str; j++){
                     array2[i][str - j - 1] = array[i][j];
-
                 }
             }
 
-            
             for(int i = 0; i < str; i++){
                 for(int j = 0; j < str; j++){
                     if(array[i][j] == 1 && array2[i][j] == 1){
@@ -42,17 +34,10 @@
             for(int i = 0; i < str; i++){
                 for(int j = 0; j < str; j++){
                     array[i][j] = finall[i][j];
-                }
-            }
-            
-            
-            for(int i = 0; i < str; i++){
-                for(int j = 0; j < str; j++){
                     array2[i][str - j - 1] = array[i][j];
                 }
             }
-            
-            
+                
             for(int i = 0; i < str; i++){
                 for(int j = 0; j < str; j++){
                     if(array[i][j] == 1 && array2[i][j] == 1){
