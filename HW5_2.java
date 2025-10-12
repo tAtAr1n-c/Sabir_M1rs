@@ -5,6 +5,7 @@ public class Main{
         Scanner scanner = new Scanner(System.in);
         String predl = scanner.nextLine().trim();
         String zapomni = "";
+        String zapor = "";
         int n = kolvosl(predl);
         int c = 0;
         for(int i = 0; i < n; i++){
@@ -19,9 +20,10 @@ public class Main{
             predl = predl.replace(zapomni + " ", "");
             if(c <= kolvobuk(zapomni)){
                 c = kolvobuk(zapomni);
+                zapor = zapomni;
             }
         }
-        System.out.println(c + " ----- " + zapomni);
+        System.out.println(c + " ----- " + zapor);
     }
 
 
@@ -39,11 +41,16 @@ public class Main{
     public static int kolvobuk(String x){
         String bukvi = "уеёыаоэяиюУЕЁЫАОЭЯИЮ";
         int finco = 0;
-        for(int i = 0; i < x.length(); i++){
-            if(bukvi.contains(x.charAt(i) + "")){
-                finco++;
+        for(int i = 0; i < bukvi.length(); i++){
+            char gl =  bukvi.charAt(i);
+            for(int j = 0; j < x.length(); j++){
+                if(gl == x.charAt(j)){
+                    finco++;
+                }
             }
+
         }
         return finco;
     }
 }
+
