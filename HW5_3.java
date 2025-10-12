@@ -26,16 +26,23 @@ public class Main{
         }else{
             System.out.println(false);
         }
-        
+
         for(int i = 0; i < str; i++){
             for(int j = 0; j < stol; j++){
                 System.out.print(array[i][j] + " ");
             } System.out.println();
         }
-     }
+    }
+
     public static boolean Poslglas(String x){
         String bukvi = "уеёыаоэяиюУЕЁЫАОЭЯИЮ";
-        if(bukvi.contains(x.charAt(x.length() - 1) + "")){
+        int con = 0;
+        for (int i = 0; i < bukvi.length();i++){
+            if(x.charAt(x.length() - 1) == bukvi.charAt(i)){
+                con++;
+            }
+        }
+        if (con == 1){
             return true;
         }else{
             return false;
