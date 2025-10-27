@@ -4,16 +4,21 @@ import java.util.regex.*;
 public class Main{
     public static void main(String[] args){
         Scanner scanner = new Scanner(System.in);
-        String str = "[ERROR] 2024-01-15: Connection failed\n" +
-                "[INFO] 2024-01-15: User logged in\n" +
-                "[DEBUG] 2024-01-15: Processing request\n" +
-                "[ERROR] 2024-01-15: Database timeout";
-
-        Pattern pat = Pattern.compile("\\[ERROR] \\d{4}-\\d{2}-\\d{2}: \\w*");
+        String str = "<div class=\n" +
+                "\"product\">\n" +
+                "<h3>Телефон</h3>\n" +
+                "<p>Цена: 20000 руб</p>\n" +
+                "</div>\n" +
+                "<div class=\n" +
+                "\"product\">\n" +
+                "<h3>Ноутбук</h3>\n" +
+                "<p>Цена: 50000 руб</p>\n" +
+                "</div>";
+        Pattern pat = Pattern.compile("<h3>[а-яА-Яa-zA-Z0-9]*</h3>");
         Matcher mat = pat.matcher(str);
         while(mat.find()){
             String found = mat.group();
-            System.out.println("Найдена ошибка: " + found);
+            System.out.println("Найден товар: " + found);
         }
     }
 }
